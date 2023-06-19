@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
@@ -11,14 +11,12 @@ const App = () => {
     <Router>
       <div>
         <Navigation />
-        <Switch>
-          <Route exact path="/" component={Rockets} />
-          <Route path="/missions" component={Missions} />
-          {teamHasThreeMembers && (
-            <Route path="/dragons" component={Dragons} />
-          )}
-          <Route path="/profile" component={Profile} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Rockets />} />
+          <Route path="/missions" element={<Missions />} />
+          <Route path="/dragons" element={<Dragons />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
       </div>
     </Router>
   );
