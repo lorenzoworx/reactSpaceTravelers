@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Rockets from './components/Rockets';
+import Missions from './components/Missions';
+import Dragons from './components/Dragons';
+import Profile from './components/Profile';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={Rockets} />
+          <Route path="/missions" component={Missions} />
+          {teamHasThreeMembers && (
+            <Route path="/dragons" component={Dragons} />
+          )}
+          <Route path="/profile" component={Profile} />
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
