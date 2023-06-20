@@ -5,22 +5,22 @@ const Navigation = () => (
   <nav>
     <ul>
       <li>
-        <NavLink exact to="/" activeClassName="active">
+        <NavLink to="/">
           Rockets
         </NavLink>
       </li>
       <li>
-        <NavLink to="/missions" activeClassName="active">
+        <NavLink to="/missions">
           Missions
         </NavLink>
       </li>
       <li>
-        <NavLink to="/dragons" activeClassName="active">
+        <NavLink to="/dragons">
           Dragons
         </NavLink>
       </li>
       <li>
-        <NavLink to="/profile" activeClassName="active">
+        <NavLink to="/profile">
           My Profile
         </NavLink>
       </li>
