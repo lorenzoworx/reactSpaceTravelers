@@ -36,14 +36,14 @@ export const RocketsSlice = createSlice({
       }))
       .addCase(fetchRockets.fulfilled, (state, action) => {
         const newRockets = [];
-        action.payload.forEach((rocket) => {
+        action.payload.map((rocket) => (
           newRockets.push({
             id: rocket.id,
             name: rocket.rocket_name,
             description: rocket.description,
             image: rocket.flickr_images[0],
-          });
-        });
+          })
+        ));
         return {
           ...state,
           isLoading: false,
