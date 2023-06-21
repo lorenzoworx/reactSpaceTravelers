@@ -1,31 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import planet from '../Images/planet.png';
 
 const Navigation = () => (
-  <nav className="navBar">
-    <div>
-      <img src={planet} alt="" className="logo" />
-      <h1>Space Travelers&apos; Hub</h1>
-    </div>
+  <nav>
     <ul>
       <li>
-        <NavLink to="/">
+        <NavLink exact to="/" activeClassName="active">
           Rockets
         </NavLink>
       </li>
       <li>
-        <NavLink to="/missions">
+        <NavLink to="/missions" activeClassName="active">
           Missions
         </NavLink>
       </li>
       <li>
-        <NavLink to="/dragons">
+        <NavLink to="/dragons" activeClassName="active">
           Dragons
         </NavLink>
       </li>
       <li>
-        <NavLink to="/profile">
+        <NavLink to="/profile" activeClassName="active">
           My Profile
         </NavLink>
       </li>
