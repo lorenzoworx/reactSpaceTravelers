@@ -1,8 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import planet from '../Images/planet.png';
 
 const Navigation = () => (
-  <nav>
+  <nav className="navBar">
+    <div>
+      <img src={planet} alt="" className="logo" />
+      <h1>Space Travelers&apos; Hub</h1>
+    </div>
     <ul>
       <li>
         <NavLink to="/">
