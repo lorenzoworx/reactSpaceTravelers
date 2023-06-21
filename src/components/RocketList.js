@@ -8,6 +8,7 @@ const RocketList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchRockets());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {
@@ -15,7 +16,7 @@ const RocketList = () => {
   }
 
   return (
-    <ul>
+    <ul className="rocketList">
       {rockets.map((rocket) => <RocketItem key={rocket.id} rocket={rocket} />)}
     </ul>
   );
