@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-  function ReservedRocketsTable({ rockets }) {
+function ReservedRocketsTable({ rockets }) {
   return (
     <table>
       <tbody>
@@ -24,7 +24,6 @@ ReservedRocketsTable.propTypes = {
     }),
   ).isRequired,
 };
-
 
 const Profile = () => {
   const missions = useSelector((state) => state.mission.missions);
