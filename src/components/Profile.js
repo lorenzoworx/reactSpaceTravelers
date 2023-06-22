@@ -1,8 +1,11 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Profile = () => {
   const missions = useSelector((state) => state.mission.missions);
   const reservedMissions = missions.filter((mission) => mission.reserved);
+  const dragons = useSelector((state) => state.dragons);
+  const reservedDragons = dragons.filter((dragon) => dragon.reserved);
   return (
     <div className="profileBox" data-id="profile-box">
       <div className="missionsProfile">
@@ -17,6 +20,25 @@ const Profile = () => {
               {reservedMission.mission_name}
             </div>
           ))}
+        </div>
+      </div>
+      <div>
+        <h2>My Profile</h2>
+        <div className="dragons-table">
+          <table>
+            <thead>
+              <tr>
+                <th>My Dragons</th>
+              </tr>
+            </thead>
+            <tbody>
+              {reservedDragons.map((dragon) => (
+                <tr key={dragon.id}>
+                  <td>{dragon.id}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
