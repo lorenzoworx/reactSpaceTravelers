@@ -84,6 +84,7 @@ body {
 .mission {
   border-bottom: 1px solid gray;
   height: 70px;
+}
 
 .navBar > div {
   display: flex;
