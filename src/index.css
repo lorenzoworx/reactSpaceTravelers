@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@200;300;400;500;600;700;800&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -82,4 +84,76 @@ body {
 .mission {
   border-bottom: 1px solid gray;
   height: 70px;
+
+.navBar > div {
+  display: flex;
+  align-items: center;
+}
+
+#root > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.rocketItem {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.rocketItem > img {
+  width: 20rem;
+  margin-right: 1rem;
+}
+
+.itemDiv > p {
+  font-family: 'montserrat', sans-serif;
+  line-height: 20px;
+  font-size: 1rem;
+}
+
+.itemDiv > button {
+  width: 15rem;
+  padding: 9px;
+  font-family: 'montserrat', sans-serif;
+  font-size: 1.2rem;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.rocketList {
+  border-top: 1px solid grey;
+  padding-top: 25px;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 4rem;
+  margin-left: 2rem;
+}
+
+.navBar > ul {
+  display: flex;
+  list-style: none;
+}
+
+.navBar > ul > li {
+  margin-right: 2rem;
+}
+
+.navBar > ul > li > a {
+  text-decoration: none;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #0290ff;
 }
