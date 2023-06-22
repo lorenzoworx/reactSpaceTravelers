@@ -5,6 +5,87 @@ body {
   padding: 0;
 }
 
+.table-container {
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.table-container td,
+.table-container th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.table-container th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+.table-container tr:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
+.table-container tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.active-member {
+  background-color: #3c8de9;
+  color: #fff;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.not-member {
+  background-color: rgb(228, 44, 44);
+  color: #fff;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.join-mission {
+  background-color: transparent;
+  border: 1px solid rgb(70, 2, 2);
+  color: rgb(69, 14, 197);
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.leave-mission {
+  background-color: transparent;
+  color: rgb(238, 71, 71);
+  border: 1px solid rgb(70, 2, 2);
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.table-action {
+  width: 10.5%;
+  margin: auto;
+}
+
+.profileBox {
+  padding: 1% 4%;
+  display: flex;
+  gap: 25px;
+}
+
+.missionsProfile {
+  width: 30%;
+}
+
+.missionsContainer {
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.mission {
+  border-bottom: 1px solid gray;
+  height: 70px;
+}
+
 .navBar > div {
   display: flex;
   align-items: center;
