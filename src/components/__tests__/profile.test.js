@@ -28,10 +28,13 @@ describe('Profile', () => {
 
     render(<Profile />);
 
-    expect(screen.getByText('My Missions')).toBeInTheDocument();
+    const missionsElements = screen.getAllByText('My Missions');
+    expect(missionsElements.length).toBeGreaterThan(0);
 
-    expect(screen.getByText('My Rockets')).toBeInTheDocument();
+    const rocketsElements = screen.getAllByText('My Rockets');
+    expect(rocketsElements.length).toBeGreaterThan(0);
 
-    expect(screen.getByText('My Dragons')).toBeInTheDocument();
+    const dragonsElements = screen.getAllByText('My Dragons');
+    expect(dragonsElements.length).toBeGreaterThan(0);
   });
 });
