@@ -1,6 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux'; // Import the Provider component
+import configureMockStore from 'redux-mock-store';
 import RocketItem from '../RocketItem';
+
+const mockStore = configureMockStore();
+const store = mockStore({});
 
 describe('RocketItem', () => {
   test('renders rocket item correctly', () => {
@@ -11,7 +16,11 @@ describe('RocketItem', () => {
       image: 'rocket-image.jpg',
       reserved: true,
     };
-    render(<RocketItem rocket={rocket} />);
+    render(
+      <Provider store={store}>
+        <RocketItem rocket={rocket} />
+      </Provider>,
+    );
     expect(screen.getByText(/Falcon 9/i)).toBeInTheDocument();
     expect(screen.getByText(/A reusable orbital rocket/i)).toBeInTheDocument();
     expect(screen.getByAltText(/Falcon 9/i)).toBeInTheDocument();
@@ -26,7 +35,11 @@ describe('RocketItem', () => {
       image: 'rocket-image.jpg',
       reserved: false,
     };
-    render(<RocketItem rocket={rocket} />);
+    render(
+      <Provider store={store}>
+        <RocketItem rocket={rocket} />
+      </Provider>,
+    );
     expect(screen.getByText(/Falcon Heavy/i)).toBeInTheDocument();
     expect(screen.getByText(/A super heavy-lift launch vehicle/i)).toBeInTheDocument();
     expect(screen.getByAltText(/Falcon Heavy/i)).toBeInTheDocument();
