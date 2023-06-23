@@ -12,6 +12,18 @@ body {
   margin-top: 2%;
 }
 
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
 .table-container td,
 .table-container th {
   border: 1px solid black;
@@ -21,6 +33,10 @@ body {
 .table-container th {
   background-color: #f2f2f2;
   text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
 .table-container tr:nth-child(odd) {
@@ -157,4 +173,8 @@ body {
   font-weight: 500;
   font-size: 0.9rem;
   color: #0290ff;
+}
+
+.rocketsProfile > h2 {
+  white-space: nowrap;
 }

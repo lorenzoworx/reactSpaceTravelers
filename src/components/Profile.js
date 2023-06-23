@@ -5,6 +5,11 @@ import PropTypes from 'prop-types';
 function ReservedRocketsTable({ rockets }) {
   return (
     <table>
+      <thead>
+        <tr>
+          <th>My Rockets</th>
+        </tr>
+      </thead>
       <tbody>
         {rockets.map((rocket) => (
           <tr key={rocket.id}>
@@ -38,17 +43,20 @@ const Profile = () => {
     <div className="profileBox" data-id="profile-box">
       <div className="missionsProfile">
         <h2>My Missions</h2>
-        <div className="missionsContainer">
-          {reservedMissions.map((reservedMission) => (
-            <div
-              key={reservedMission.mission_id}
-              className="missions"
-              data-id="mission"
-            >
-              {reservedMission.mission_name}
-            </div>
-          ))}
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>My Missions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {reservedMissions.map((reservedMission) => (
+              <tr key={reservedMission.mission_id}>
+                <td>{reservedMission.mission_name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
       <div className="rocketsProfile">
         <h2>My Rockets</h2>
@@ -59,8 +67,8 @@ const Profile = () => {
         )}
       </div>
       <div>
-        <h2>My Profile</h2>
         <div className="dragons-table">
+          <h2>My Dragons</h2>
           <table>
             <thead>
               <tr>
