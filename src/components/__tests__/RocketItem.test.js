@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux'; // Import the Provider component
 import configureMockStore from 'redux-mock-store';
 import RocketItem from '../RocketItem';
+import '@testing-library/jest-dom/extend-expect';
 
 const mockStore = configureMockStore();
 const store = mockStore({});
@@ -41,7 +42,9 @@ describe('RocketItem', () => {
       </Provider>,
     );
     expect(screen.getByText(/Falcon Heavy/i)).toBeInTheDocument();
-    expect(screen.getByText(/A super heavy-lift launch vehicle/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/A super heavy-lift launch vehicle/i),
+    ).toBeInTheDocument();
     expect(screen.getByAltText(/Falcon Heavy/i)).toBeInTheDocument();
     expect(screen.getByText(/Reserve Rocket/i)).toBeInTheDocument();
   });

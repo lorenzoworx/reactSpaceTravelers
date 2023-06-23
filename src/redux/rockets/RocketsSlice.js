@@ -55,7 +55,7 @@ export const RocketsSlice = createSlice({
             id: rocket.id,
             name: rocket.rocket_name,
             description: rocket.description,
-            image: rocket.flickr_images[0],
+            image: rocket.flicker_images[0],
             reserved: false,
           })
         ));
