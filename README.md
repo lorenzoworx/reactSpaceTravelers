@@ -185,7 +185,7 @@ Example command:
 
 👤 **Gakii Beryl**
 
-- GitHub: [@berylcl] (https://github.com/berylcl)
+- GitHub: [@berylcl](https://github.com/berylcl)
 - Twitter: [omg_its_beryl](https://twitter.com/omg_its_beryl)
 - LinkedIn: [callme-claudette](https://www.linkedin.com/in/callme-claudette-83a796230/)
 
