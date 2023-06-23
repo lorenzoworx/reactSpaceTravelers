@@ -46,7 +46,8 @@ h1 {
 
 table {
   border-collapse: collapse;
-  width: 80%;
+  width: 250px;
+  margin-right: 50px;
   border: 1px solid #ddd;
 }
 
