@@ -7,39 +7,42 @@ const initialState = {
 
 const rocketsEndpoint = 'https://api.spacexdata.com/v3/rockets';
 
-export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
-  try {
-    const response = await fetch(rocketsEndpoint);
-    const data = response.json();
-    return data;
-  } catch (error) {
-    return error;
-  }
-});
+export const fetchRockets = createAsyncThunk(
+  'rockets/fetchRockets',
+  async () => {
+    try {
+      const response = await fetch(rocketsEndpoint);
+      const data = response.json();
+      return data;
+    } catch (error) {
+      return error;
+    }
+  },
+);
 
 export const RocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
     rocketReserve: (state, action) => {
-      const newRockets = (state.rockets.map((rocket) => {
+      const newRockets = state.rockets.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: true };
-      }));
-      return ({
+      });
+      return {
         ...state,
         rockets: newRockets,
-      });
+      };
     },
     cancelReserve: (state, action) => {
-      const newRockets = (state.rockets.map((rocket) => {
+      const newRockets = state.rockets.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: false };
-      }));
-      return ({
+      });
+      return {
         ...state,
         rockets: newRockets,
-      });
+      };
     },
   },
   extraReducers: (builder) => {
@@ -50,15 +53,13 @@ export const RocketsSlice = createSlice({
       }))
       .addCase(fetchRockets.fulfilled, (state, action) => {
         const newRockets = [];
-        action.payload.map((rocket) => (
-          newRockets.push({
-            id: rocket.id,
-            name: rocket.rocket_name,
-            description: rocket.description,
-            image: rocket.flicker_images[0],
-            reserved: false,
-          })
-        ));
+        action.payload.map((rocket) => newRockets.push({
+          id: rocket.id,
+          name: rocket.rocket_name,
+          description: rocket.description,
+          image: rocket.flickr_images[0],
+          reserved: false,
+        }));
         return {
           ...state,
           isLoading: false,
