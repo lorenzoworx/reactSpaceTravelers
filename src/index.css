@@ -183,7 +183,7 @@ tr:nth-child(even) {
   position: relative;
 }
 
-.activeLink:after {
+.activeLink::after {
   content: "";
   position: absolute;
   left: 0;
