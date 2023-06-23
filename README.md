@@ -115,7 +115,7 @@ To run tests, run the following command:
 
 - GitHub: [@berylcl](https://github.com/berylcl)
 - Twitter: [omg_its_beryl](https://twitter.com/omg_its_beryl)
-- LinkedIn: [callme-claudette](https://www.linkedin.com/in/callme-claudette-83a796230/)
+- LinkedIn: [callme-claudette](https://www.linkedin.com/in/gakii-beryl)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
