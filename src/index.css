@@ -180,3 +180,7 @@ table {
   width: 80%;
   border: 1px solid #ddd;
 }
+
+.rocketsProfile > h2 {
+  white-space: nowrap;
+}
