@@ -5,7 +5,7 @@ import planet from '../Images/planet.png';
 const Navigation = () => (
   <nav className="navBar">
     <div>
-      <img src={planet} alt="" className="logo" />
+      <img src={planet} alt="logo" className="logo" />
       <h1>Space Travelers&apos; Hub</h1>
     </div>
     <ul>
