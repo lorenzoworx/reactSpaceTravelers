@@ -32,7 +32,6 @@ describe('Missions', () => {
         <Missions />
       </Provider>,
     );
-    console.log(store);
     expect(screen.getByText(/Mission 1/i)).toBeInTheDocument();
     expect(screen.getByText(/Mission 2/i)).toBeInTheDocument();
   });

@@ -183,11 +183,11 @@ Example command:
 - LinkedIn: [shalini-nayan-5820389](https://linkedin.com/in/shalini-nayan-5820389)
 
 
-👤 **Author3**
+👤 **Gakii Beryl**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@berylcl](https://github.com/berylcl)
+- Twitter: [omg_its_beryl](https://twitter.com/omg_its_beryl)
+- LinkedIn: [callme-claudette](https://www.linkedin.com/in/callme-claudette-83a796230/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
