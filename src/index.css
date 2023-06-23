@@ -178,3 +178,17 @@ tr:nth-child(even) {
 .rocketsProfile > h2 {
   white-space: nowrap;
 }
+
+.activeLink {
+  position: relative;
+}
+
+.activeLink:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #0290ff; /* Change this to the desired color */
+}
